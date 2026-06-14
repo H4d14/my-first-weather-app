@@ -9,11 +9,10 @@ function refreshWeather(response) {
 
 function searchCity(city) {
   let apiKey = "11887d043t216f31aoc82b0e0d11614d";
-  let apiUrl =
-    "https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+
   axios.get(apiUrl).then(refreshWeather);
 }
-
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
